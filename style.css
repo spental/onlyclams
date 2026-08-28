@@ -1,0 +1,202 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #e8f7ff;
+    color: #123;
+}
+
+
+/* HEADER */
+
+header {
+    background: #083b66;
+    color: white;
+    padding: 30px 20px;
+}
+
+.header-content {
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.1rem;
+}
+
+
+/* NAVIGATION */
+
+nav {
+    margin-top: 20px;
+}
+
+button {
+    border: none;
+    border-radius: 25px;
+    padding: 12px 22px;
+    margin: 5px;
+    background: #ff7f50;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.03);
+}
+
+
+/* MAIN */
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+
+/* WELCOME */
+
+.welcome {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.welcome h2 {
+    font-size: 2.3rem;
+    margin-bottom: 15px;
+}
+
+.welcome p {
+    font-size: 1.15rem;
+    line-height: 1.6;
+}
+
+
+/* CARDS */
+
+.card {
+    background: white;
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.card h2 {
+    margin-bottom: 20px;
+}
+
+
+/* FORMS */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+input {
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+input[type="file"] {
+    background: #f5f5f5;
+}
+
+
+/* FEED */
+
+.feed {
+    margin-top: 40px;
+}
+
+.feed h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+
+/* CLAM POSTS */
+
+#clamFeed {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.clam-post {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.clam-post img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.clam-info {
+    padding: 18px;
+}
+
+.clam-username {
+    font-weight: bold;
+    color: #083b66;
+    margin-bottom: 8px;
+}
+
+.clam-caption {
+    line-height: 1.5;
+    margin-top: 8px;
+}
+
+
+/* MESSAGES */
+
+#signupMessage,
+#loginMessage,
+#uploadMessage {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.loading {
+    text-align: center;
+    padding: 30px;
+}
+
+
+/* HIDDEN */
+
+.hidden {
+    display: none;
+}
+
+
+/* FOOTER */
+
+footer {
+    margin-top: 50px;
+    padding: 30px;
+    background: #083b66;
+    color: white;
+    text-align: center;
+}
