@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Only Clams</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-content">
+            <h1>🦪 Only Clams</h1>
+            <p>The place to share your favorite clams.</p>
+
+            <nav>
+                <button id="loginButton">Log In</button>
+                <button id="signupButton">Create Account</button>
+                <button id="logoutButton" class="hidden">Log Out</button>
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- Welcome -->
+        <section class="welcome">
+            <h2>Welcome to Only Clams</h2>
+
+            <p>
+                Discover clams posted by people from everywhere.
+                Create an account and share your own clam photos!
+            </p>
+        </section>
+
+
+        <!-- Account Area -->
+        <section id="accountSection" class="card hidden">
+
+            <h2>Create Your Account</h2>
+
+            <form id="signupForm">
+
+                <input
+                    type="text"
+                    id="signupUsername"
+                    placeholder="Username"
+                    required
+                >
+
+                <input
+                    type="email"
+                    id="signupEmail"
+                    placeholder="Email"
+                    required
+                >
+
+                <input
+                    type="password"
+                    id="signupPassword"
+                    placeholder="Password"
+                    required
+                >
+
+                <button type="submit">
+                    Create Account
+                </button>
+
+            </form>
+
+            <p id="signupMessage"></p>
+
+        </section>
+
+
+        <!-- Login -->
+        <section id="loginSection" class="card hidden">
+
+            <h2>Log In</h2>
+
+            <form id="loginForm">
+
+                <input
+                    type="email"
+                    id="loginEmail"
+                    placeholder="Email"
+                    required
+                >
+
+                <input
+                    type="password"
+                    id="loginPassword"
+                    placeholder="Password"
+                    required
+                >
+
+                <button type="submit">
+                    Log In
+                </button>
+
+            </form>
+
+            <p id="loginMessage"></p>
+
+        </section>
+
+
+        <!-- Upload -->
+        <section id="uploadSection" class="card hidden">
+
+            <h2>🦪 Share Your Clam</h2>
+
+            <p id="currentUser"></p>
+
+            <form id="uploadForm">
+
+                <input
+                    type="file"
+                    id="clamPhoto"
+                    accept="image/*"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="clamCaption"
+                    placeholder="Tell us about your clam..."
+                    maxlength="250"
+                >
+
+                <button type="submit">
+                    Post Clam
+                </button>
+
+            </form>
+
+            <p id="uploadMessage"></p>
+
+        </section>
+
+
+        <!-- Public Feed -->
+        <section class="feed">
+
+            <h2>🦪 Clam Feed</h2>
+
+            <div id="clamFeed">
+
+                <p class="loading">
+                    Loading clams...
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>© 2026 Only Clams</p>
+    </footer>
+
+
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
