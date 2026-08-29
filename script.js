@@ -2,9 +2,9 @@
 // ONLY CLAMS - SUPABASE CONFIGURATION
 // ==========================================
 
-const SUPABASE_URL = "YOUR_SUPABASE_URL";
+const SUPABASE_URL = "https://gndkoglhswawxhxrjhiv.supabase.co/rest/v1/";
 
-const SUPABASE_ANON_KEY = "YOUR_SUPABASE_ANON_KEY";
+const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImduZGtvZ2xoc3dhd3hoeHJqaGl2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc5MjI5NTUsImV4cCI6MjEwMzQ5ODk1NX0.H1G-4GF3OTF0XUNv5J8MbK6z12JUw6R1EI319nBwe44";
 
 const supabaseClient = supabase.createClient(
     SUPABASE_URL,
