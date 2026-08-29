@@ -2,7 +2,7 @@
 // ONLY CLAMS - SUPABASE CONFIGURATION
 // ==========================================
 
-const SUPABASE_URL = "https://ozeqwenykukqscmhmkuz.supabase.co/rest/v1/";
+const SUPABASE_URL = "https://ozeqwenykukqscmhmkuz.supabase.co";
 
 const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im96ZXF3ZW55a3VrcXNjbWhta3V6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODgwMjY4MjYsImV4cCI6MjEwMzYwMjgyNn0.PV5iRgfXSBMzOL3wBhYg4mI-ZgSi2JzWLxsq8iDRgMc";
 
