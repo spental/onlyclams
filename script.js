@@ -85,11 +85,17 @@ signupForm.addEventListener("submit", async (event) => {
 
     try {
 
-        const { data, error } =
-            await supabaseClient.auth.signUp({
-                email: email,
-                password: password
-            });
+       const { data, error } =
+    await supabaseClient.auth.signUp({
+        email: email,
+        password: password,
+
+        options: {
+            data: {
+                username: username
+            }
+        }
+    });
 
 
         if (error) {
