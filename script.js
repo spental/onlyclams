@@ -66,6 +66,10 @@ signupButton.addEventListener("click", () => {
 // CREATE ACCOUNT
 // ==========================================
 
+// ==========================================
+// CREATE ACCOUNT
+// ==========================================
+
 signupForm.addEventListener("submit", async (event) => {
 
     event.preventDefault();
@@ -79,53 +83,31 @@ signupForm.addEventListener("submit", async (event) => {
     const password =
         document.getElementById("signupPassword").value;
 
-
     signupMessage.textContent = "Creating account...";
-
 
     try {
 
-       const { data, error } =
-    await supabaseClient.auth.signUp({
-        email: email,
-        password: password,
+        const { data, error } =
+            await supabaseClient.auth.signUp({
 
-        options: {
-            data: {
-                username: username
-            }
-        }
-    });
+                email: email,
 
+                password: password,
+
+                options: {
+                    data: {
+                        username: username
+                    }
+                }
+
+            });
 
         if (error) {
             throw error;
         }
 
-
-        if (!data.user) {
-            throw new Error("Unable to create account.");
-        }
-
-
-        // Save username in profiles table
-
-        const { error: profileError } =
-            await supabaseClient
-                .from("profiles")
-                .insert({
-                    id: data.user.id,
-                    username: username
-                });
-
-
-        if (profileError) {
-            throw profileError;
-        }
-
-
         signupMessage.textContent =
-            "Account created! Check your email to confirm your account.";
+            "Account created! You can now log in.";
 
         signupForm.reset();
 
