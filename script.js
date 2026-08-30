@@ -314,31 +314,31 @@ uploadForm.addEventListener("submit", async (event) => {
 
     // Save post
 
-    const { error: postError } =
-        await supabaseClient
-            .from("clams")
-            .insert({
+   const { error: postError } =
+    await supabaseClient
+        .from("clams")
+        .insert({
 
-                user_id: user.id,
+            user_id: user.id,
 
-                username: profile.username,
+            username: profile.username,
 
-                image_url: imageUrl,
+            image_url: imageUrl,
 
-                caption: caption
+            caption: caption
 
-            });
+        });
 
 
-    if (postError) {
+if (postError) {
 
-        console.error(postError);
+    console.error("POST ERROR:", postError);
 
-        uploadMessage.textContent =
-            "Could not create your post.";
+    uploadMessage.textContent =
+        "Could not create your post: " + postError.message;
 
-        return;
-    }
+    return;
+}
 
 
     uploadMessage.textContent =
